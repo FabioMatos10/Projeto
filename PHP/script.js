@@ -1,3 +1,4 @@
+
 const tag = document.querySelector(".tag"),
 selectBtn = tag.querySelector(".select-btn"),
 searchInp = tag.querySelector("input"),
@@ -35,3 +36,4 @@ searchInp.addEventListener("keyup", () => {
 });
 
 selectBtn.addEventListener("click", () => tag.classList.toggle("active"));
+
