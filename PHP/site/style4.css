@@ -1,0 +1,53 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: modesto-condensed, serif;
+  }
+  
+  body {
+    font-family: sans-serif;
+   
+  }
+  
+  
+.about .row{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2% 6%;
+  }
+  .about .row .image{
+    flex: 1 1 40rem;
+    padding: 2rem;
+  }
+  .about .row .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .about .row .content{
+    flex: 1 1 40rem;
+    padding: 2rem;
+  
+  }
+  .about .row .content h1{
+    font-size: 3rem;
+    color: black;
+    margin-bottom: 5rem;
+    font-family: modesto-condensed, serif;
+  }
+  .about .row .content p{
+    line-height: 1.7;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    margin-bottom: 1.2rem;
+    text-indent: 5px;
+    color: black
+  }
+
+
+

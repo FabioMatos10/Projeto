@@ -1,0 +1,95 @@
+.about .row{
+    background-color: #012A2F;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2% 6%;
+  }
+  .about .row.image1{
+    flex: 1 1 40rem;
+    padding: 2rem;
+  }
+  .about .row .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .about .row .content{
+    flex: 1 1 40rem;
+    padding: 2rem;
+  
+  }
+  .about .row .content h1{
+    font-size: 50px;
+    color: white;
+    margin-bottom: 5rem;
+
+    font-family: modesto-condensed, serif;
+
+}
+  
+  .about .row .content h2{
+    font-size: 30px;
+    color: black;
+    margin-bottom: 5rem;
+    font-family: modesto-condensed, serif;
+  }
+  .about .row .content p{
+    line-height: 1.7;
+    font-family: "Montserrat", sans-serif;
+    font-size: 30px;
+    margin-bottom: 1.2rem;
+    text-indent: 5px;
+    color: white;
+  }
+
+
+  .about1 .row1{
+ 
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2% 6%;
+  }
+  .about1 .row1.image1{
+    flex: 1 1 40rem;
+    padding: 2rem;
+  }
+  .about1 .row1 .image1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .about1 .row1 .content1{
+    flex: 1 1 40rem;
+    padding: 2rem;
+  
+  }
+  .about1 .row1 .content1 h1{
+    font-size: 50px;
+    color: black;
+    margin-bottom: 5rem;
+    position: relative;
+    font-family: modesto-condensed, serif;
+    right: 110px;
+}
+  
+  .about1 .row1 .content1 h2{
+    font-size: 30px;
+    color: WHITE;
+    margin-bottom: 5rem;
+    font-family: modesto-condensed, serif;
+  }
+  .about1 .row1 .content1 p{
+    line-height: 1.7;
+    font-family: "Montserrat", sans-serif;
+    font-size: 30px;
+    margin-bottom: 1.2rem;
+    text-indent: 5px;
+    color: #666;
+  }
+
