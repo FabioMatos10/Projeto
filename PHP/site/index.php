@@ -1,21 +1,11 @@
 <?php
-include "../menu/menu1.php";
+include "./menu/menu1.php";
 
 ?>
 
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-
-
-    
-  </head>
     <link rel="stylesheet" href="style.css" />
-    <title>GYMENERGY</title>
-  </head>
-  <body>
+
    <br><br><br><br><br><br><br>
    <br><br><br><br><br><br><br>     <br><br><br><br><br>   <br><br><br><br><br><br><br>  <br><br><br><br><br><br><br>   <br><br><br><br><br><br><br>
       <section class="about">
