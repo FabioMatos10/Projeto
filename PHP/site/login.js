@@ -5,7 +5,7 @@ $(document).ready(function() {
   
         $.ajax({
             type:"POST",
-            url: "http://localhost/PHP/API/loginApi.php",
+            url: "../API/loginAPI.php",
             data:{
                 accao:"login",
                 email:email,
@@ -16,12 +16,15 @@ $(document).ready(function() {
                 console.log(resposta);
                 if (resposta== "admin") {
                     window.location.href="admin_page.php";
-                }else{
-            
+                }
+                if (resposta== "user") {
                     window.location.href="index.php";
                 }
+            
+            
+                
               }
         });
-        
     });
+
   });

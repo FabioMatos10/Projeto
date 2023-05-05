@@ -6,26 +6,25 @@
 <html>
 <head>
     <meta charset='UTF-8'/>
-    <title>88 God's</title>
     <link rel="stylesheet" href="css\style_edit.css">
 </head>
 
 <body>
     <?php
          $conexao = new Conexao();
-        if(isset($_GET["ID_Utilizador"])):
-            $ID_Utilizador = $_GET["ID_Utilizador"];
+        if(isset($_GET["ID_Utilizadores"])):
+            $ID_Utilizadores = $_GET["ID_Utilizadores"];
         endif;
 
-        $listar = $conexao->runQuery("SELECT * FROM Utilizador WHERE ID_Utilizador='$ID_Utilizador'");
+        $listar = $conexao->runQuery("SELECT * FROM utilizador WHERE ID_Utilizadores='$ID_Utilizadores'");
         $listar->execute();
         $lista = $listar->fetch(PDO::FETCH_ASSOC);
 
         if(isset($_POST["editar"])):
-            $nome = $_POST["ID_Utilizador"];
+            $nome = $_POST["nome"];
             $password = $_POST["password"];
 
-            $alterar = $conexao->runQuery("UPDATE Utilizador SET nome='$nome' , password='$password' WHERE ID_Utilizador='$ID_Utilizador'");
+            $alterar = $conexao->runQuery("UPDATE utilizador SET nome='$nome' , password='$password' WHERE ID_Utilizadores='$ID_Utilizadores'");
             $alterar->execute();
 
             if($alterar):

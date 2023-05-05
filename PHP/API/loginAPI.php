@@ -18,7 +18,6 @@ function login($email,$password){
         $utilizador = new Utilizador();
         $obterUtilizador = $utilizador->UtilizadorEValido($email,$password);
         header($_SERVER['SERVER_PROTOCOL'] . ' 200 Ok', true, 200);
-       
         echo json_encode($obterUtilizador);
         return;
     } catch (Exception $e) {

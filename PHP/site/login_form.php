@@ -1,43 +1,7 @@
 <?php
 
 @include 'config.php';
-
 session_start();
-
-if(isset($_POST['submit'])){
-
-   $email = mysqli_real_escape_string($conn, $_POST['email']);
-   $pass = md5($_POST['password']);
-
-
-
-   $select = " SELECT * FROM Utilizador WHERE email = '$email' && password = '$pass' ";
-
-   $result = mysqli_query($conn, $select);
-
-   if(mysqli_num_rows($result) > 0){
-
-      $row = mysqli_fetch_array($result);
-
-      if($row['permissao'] == 'admin'){
-
-         $_SESSION['admin_name'] = $row['nome'];
-         header('location:admin_page.php');
-
-      }else{
-
-      
-
-         $_SESSION['user_name'] = $row['nome'];
-         header('location:index.php');
-
-      }
-     
-   }else{
-      $error[] = 'O email ou a password estão erradas !';
-   }
-
-};
 ?>
 
 <head>
@@ -55,7 +19,9 @@ if(isset($_POST['submit'])){
 </head>
 <body>
 
-
+<?php
+include "./menu/menu1.php";
+?>
 
 <div class="form-container">
 

@@ -1,16 +1,16 @@
 <?php
+$conn = mysqli_connect('localhost','root','','pap');
 
-@include 'config.php';
 
 
 
 if(isset($_POST['submit'])){
 
-   $nome = mysqli_real_escape_string($conn, $_POST['nome']);
-   $email = mysqli_real_escape_string($conn, $_POST['email']);
+   $nome = ($_POST['nome']);
+   $email = ($_POST['email']);
    $pass = md5($_POST['password']);
    $cpass = md5($_POST['cpassword']);
-   $permissao = $_POST['permissao'];
+
 
    $select = " SELECT * FROM utilizador WHERE email = '$email' && password = '$pass' ";
 

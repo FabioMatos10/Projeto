@@ -103,6 +103,7 @@ session_start();
                 $listagem = $conexao->runQuery("SELECT * FROM utilizador");
                 $listagem->execute();
                 while($lista = $listagem->fetch(PDO::FETCH_ASSOC)):
+               $_SESSION['esgaca1'] = $Id_Utilizador;
             ?>
 
             <tr>
@@ -111,8 +112,8 @@ session_start();
                 <td><?php echo $lista["email"]; ?></td>
                 <td><?php echo $lista["password"]; ?></td>
                 <td><?php echo $lista["permissao"]; ?></td>
-                <td><a href="remover.php?ID_Utilizador=<?php echo $lista["ID_Utilizadores"]; ?>"><button class="button1">Remover</button></a></td>
-                <td><a href="editar.php?ID_Utilizador=<?php echo $lista["ID_Utilizadores"]; ?>"><button class="button1">Editar</button></a></td>
+                <td><a href="remover.php?"><button class="button1">Remover</button></a></td>
+                <td><a href="editar.php?"><button class="button1">Editar</button></a></td>
             
             <?php
                 endwhile;

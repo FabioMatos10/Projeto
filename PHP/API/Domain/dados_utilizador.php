@@ -15,7 +15,7 @@ class Utilizador {
  
  
          if ($row == false) {
-             return false;
+             return "false";
          } else {
                     if ($password == $row['password']) {    
                      if($row['permissao'] == 'admin'){
@@ -28,7 +28,7 @@ class Utilizador {
                      }
  
             }else{
-               return false;
+               return "false";
             }
          
          }
