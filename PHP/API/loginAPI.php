@@ -14,11 +14,12 @@ switch ($_POST['accao'])
 
 function login($email,$password){
     try {
-        // Do your stuff  
+        // Do your stuff
         $utilizador = new Utilizador();
-        $obterUtilizador = $utilizador->UtilizadorEValido($email,$password);      
+        $obterUtilizador = $utilizador->UtilizadorEValido($email,$password);
         header($_SERVER['SERVER_PROTOCOL'] . ' 200 Ok', true, 200);
-        echo true;
+       
+        echo json_encode($obterUtilizador);
         return;
     } catch (Exception $e) {
         header($_SERVER['SERVER_PROTOCOL'] . ' 500 Internal Server Error', true, 500);
@@ -27,5 +28,7 @@ function login($email,$password){
     }
 
 }
+
+
 
 ?>

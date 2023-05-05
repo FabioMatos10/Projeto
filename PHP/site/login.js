@@ -1,6 +1,5 @@
 $(document).ready(function() {
     $("#submit").click(function() {
-  
         var email= $('#email').val();
         var password= $('#password').val();
   
@@ -12,12 +11,16 @@ $(document).ready(function() {
                 email:email,
                 password:password
             },
-            datatype:"json",
+            dataType: "json",
             success: function(resposta) {
-              console.log(resposta);
-             
-                   
-            }
+                console.log(resposta);
+                if (resposta== "admin") {
+                    window.location.href="admin_page.php";
+                }else{
+            
+                    window.location.href="index.php";
+                }
+              }
         });
         
     });

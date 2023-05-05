@@ -133,3 +133,30 @@
    font-size: 20px;
    padding:10px;
 }
+
+table, th, td {
+   border: 1px solid #A9A9A9;
+   }
+   
+   table {
+   border-collapse: collapse;
+   margin: auto;
+   margin-top: 260px;
+   
+   }
+   
+   th, td{
+   padding: 10px;
+   text-align: center;
+   width: 120px;
+   }
+   
+   th{
+   font-weight: bold;
+   color: white;
+   }
+   
+   
+   tr:nth-child(even) {
+   background-color: #00008B;
+   }

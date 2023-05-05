@@ -22,7 +22,21 @@ if(!isset($_SESSION['user_name'])){
    <link rel="stylesheet" href="menu/style.css">
 
 </head>
+
 <body>
+<?php
+        if(isset($_GET["id"])):
+            $id = $_GET["id"];
+        endif;
+
+        $listar = $pdo->prepare("SELECT * FROM utilizador WHERE id='$id'");
+        $listar->execute();
+        $lista = $listar->fetch(PDO::FETCH_ASSOC);
+
+
+
+    ?>
+
     
 <div class="menu-bar">
       <h1 class="logo">GYM<span>ENERGY</span></h1>
@@ -71,7 +85,39 @@ if(!isset($_SESSION['user_name'])){
 
     </div>  
    
+    <div class="table_responsive">
+            <table>
+            <thead>
+                <tr>
+                <th>ID_Utilizadores</th>
+                <th>nome</th>
+                <th>email</th>
+                <th>password</th>
 
+                </tr>
+            </thead>
+            <tbody>
+            <?php
+                $listagem = $pdo->prepare("SELECT * FROM utilizador");
+                $listagem->execute();
+                while($lista = $listagem->fetch(PDO::FETCH_ASSOC)):
+            ?>
+
+            <tr>
+                <td><?php echo $lista["ID_Utilizadores "]; ?></td>
+                <td><?php echo $lista["nome"]; ?></td>
+                <td><?php echo $lista["email"]; ?></td>
+                <td><?php echo $lista["password"]; ?></td>
+                <td><?php echo $lista["permissao"]; ?></td>
+                
+            
+            <?php
+                endwhile;
+            ?>
+            </tbody>
+            </table>
+        </div>
+        </div>
 
 </body>
 </html>

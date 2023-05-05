@@ -1,12 +1,10 @@
 <?php
 
-@include 'config.php';
+require '../API/Domain/config.php';
 
 session_start();
 
-if(!isset($_SESSION['admin_name'])){
-   header('location:login_form.php');
-}
+
 
 
 ?>
@@ -27,6 +25,8 @@ if(!isset($_SESSION['admin_name'])){
 
 </head>
 <body>
+
+
 <div class="menu-bar">
       <h1 class="logo">GYM<span>ENERGY</span></h1>
       <ul>
@@ -86,6 +86,41 @@ if(!isset($_SESSION['admin_name'])){
 
 </div>
 
+<div class="table_responsive">
+            <table>
+            <thead>
+                <tr>
+                <th>ID_Utilizadores</th>
+                <th>nome</th>
+                <th>email</th>
+                <th>password</th>
+
+                </tr>
+            </thead>
+            <tbody>
+            <?php
+                $conexao = new Conexao();
+                $listagem = $conexao->runQuery("SELECT * FROM utilizador");
+                $listagem->execute();
+                while($lista = $listagem->fetch(PDO::FETCH_ASSOC)):
+            ?>
+
+            <tr>
+                <td><?php echo $lista["ID_Utilizadores"]; ?></td>
+                <td><?php echo $lista["nome"]; ?></td>
+                <td><?php echo $lista["email"]; ?></td>
+                <td><?php echo $lista["password"]; ?></td>
+                <td><?php echo $lista["permissao"]; ?></td>
+                <td><a href="remover.php?ID_Utilizador=<?php echo $lista["ID_Utilizadores"]; ?>"><button class="button1">Remover</button></a></td>
+                <td><a href="editar.php?ID_Utilizador=<?php echo $lista["ID_Utilizadores"]; ?>"><button class="button1">Editar</button></a></td>
+            
+            <?php
+                endwhile;
+            ?>
+            </tbody>
+            </table>
+        </div>
+        </div>
    
 </body>
 </html>
