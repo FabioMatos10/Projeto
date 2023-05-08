@@ -62,14 +62,14 @@ session_start();
               <li><a href="#">Planos de treino</a></li>
               <li><a href="#">Personal Training</a></li>
               <li><a href="nutricao.php">Nutrição</a></li>
-              <li>
+              <li><a id="nomeutilizador"></a></li>
             </ul>
           </div>
       </li>
         <li><a href="#">NOVIDADES</a>
         </li> 
         <li><a href="#">ADESÃO</a></li>
-        <li><?php echo $_SESSION['admin_name'] ?></li>
+        <li></li>
       </ul>
 
     </div>  
@@ -77,7 +77,7 @@ session_start();
 
    <div class="content">
       <h3>Ola, <span>admin</span></h3>
-      <h1>Boas <span><?php echo $_SESSION['admin_name'] ?></span></h1>
+      <h1>Boas <span id="nomeutilizador"></span></h1>
       <p>Aqui só estão os maiores</p>
       <a href="login_form.php" class="btn">login</a>
       <a href="register_form.php" class="btn">register</a>
@@ -99,11 +99,11 @@ session_start();
             </thead>
             <tbody>
             <?php
+        
                 $conexao = new Conexao();
                 $listagem = $conexao->runQuery("SELECT * FROM utilizador");
                 $listagem->execute();
                 while($lista = $listagem->fetch(PDO::FETCH_ASSOC)):
-               $_SESSION['esgaca1'] = $Id_Utilizador;
             ?>
 
             <tr>
@@ -112,8 +112,8 @@ session_start();
                 <td><?php echo $lista["email"]; ?></td>
                 <td><?php echo $lista["password"]; ?></td>
                 <td><?php echo $lista["permissao"]; ?></td>
-                <td><a href="remover.php?"><button class="button1">Remover</button></a></td>
-                <td><a href="editar.php?"><button class="button1">Editar</button></a></td>
+                <td><a href="remover.php?id=<?php echo $lista["ID_Utilizadores"]; ?>"><button class="button1">Remover</button></a></td>
+                <td><a href="editar.php?id=<?php echo $lista["ID_Utilizadores"]; ?>"><button class="button1">Editar</button></a></td>
             
             <?php
                 endwhile;
@@ -122,6 +122,9 @@ session_start();
             </table>
         </div>
         </div>
-   
+
+<script src="admin_page.js"></script>
 </body>
+<script src="admin_page.js"></script>
+
 </html>

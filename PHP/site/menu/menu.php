@@ -50,7 +50,8 @@
       </li>
         <li><a href="novidades.php">NOVIDADES</a>
         </li> 
-        <li><a href="register_form.php">REGISTO</a></li>
+        <li id="registoutilizador"><a href="register_form.php">REGISTO</a></li>
+        <li id="registoutilizador"></li>
       </ul>
     </div>
     

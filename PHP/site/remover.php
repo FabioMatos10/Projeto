@@ -3,11 +3,11 @@
     require '../API/Domain/config.php';
     $conexao = new Conexao();
 
-    $Id_Utilizador= $_SESSION["ID_Utilizadores"];
+    $ID_Utilizadores= $_GET["id"];
     
 
-    $delete = 'DELETE FROM utilizadores WHERE ID_Utilizadores = :ID_Utilizadores';
-    $executar = $connect->prepare($delete);
+    $delete = 'DELETE FROM utilizador WHERE ID_Utilizadores = :ID_Utilizadores';
+    $executar = $conexao->runQuery($delete);
     $executar->execute(array(':ID_Utilizadores' => $ID_Utilizadores));
 
 

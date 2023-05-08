@@ -13,18 +13,38 @@ $(document).ready(function() {
             },
             dataType: "json",
             success: function(resposta) {
-                console.log(resposta);
-                if (resposta== "admin") {
+                if (resposta[0] == "false"){
+                    alert ("Algo de errado, nao está certo");
+                }else{
+                    cookies(resposta);
+                }
+ 
+                if (resposta["permissao"]== "admin") {
+                   
                     window.location.href="admin_page.php";
                 }
-                if (resposta== "user") {
+                if (resposta["permissao"]== "user") {
                     window.location.href="index.php";
                 }
-            
+
+             
             
                 
               }
         });
+        function cookies(resposta) { 
+            var date = new Date();
+            var getdate = date.getTime();
+            var expirarCookie = getdate + 1000*1296;       
+            date.setTime(expirarCookie);
+          
+            document.cookie = "ID_Utilizadores= "+resposta['ID_Utilizadores']+';expires='+date.toUTCString()+"; secure=true"+';path=/';
+            document.cookie = "nome= "+resposta['nome']+';expires='+date.toUTCString()+"; secure=true"+';path=/';
+            document.cookie = "email= "+resposta['email']+';expires='+date.toUTCString()+"; secure=true"+';path=/';
+            document.cookie = "password= "+resposta['password']+';expires='+date.toUTCString()+"; secure=true"+';path=/';
+            document.cookie = "permissao= "+resposta['permissao']+';expires='+date.toUTCString()+"; secure=true"+';path=/';
+
+          }
     });
 
   });

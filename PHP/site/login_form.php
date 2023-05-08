@@ -30,7 +30,7 @@ include "./menu/menu1.php";
    
       <input id="email" type="email" name="email" required placeholder="Digite o seu email">
       <input id="password" type="password" name="password" required placeholder="Digite a sua password" >
-      <input id="submit" type="submit" value="login " class="form-btn">
+      <input id="submit" type="button" value="login " class="form-btn">
    <p>Não tem conta?? <a href="register_form.php">Resgisto</a></p>
    </form>
 
