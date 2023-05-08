@@ -153,10 +153,10 @@ table, th, td {
    
    th{
    font-weight: bold;
-   color: white;
+   color: black;
    }
    
    
    tr:nth-child(even) {
-   background-color: #00008B;
+   background-color: #666;
    }

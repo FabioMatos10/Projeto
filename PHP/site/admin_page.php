@@ -8,24 +8,9 @@ session_start();
 
 
 ?>
-
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>GYMENERGY</title>
-
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="menu/style.css">
    
-   
-
-
-</head>
-<body>
-
 
 <div class="menu-bar">
       <h1 class="logo">GYM<span>ENERGY</span></h1>
@@ -123,8 +108,159 @@ session_start();
         </div>
         </div>
 
+        <?php
+$conn = mysqli_connect('localhost','root','','pap');
+
+
+
+
+if(isset($_POST['submit'])){
+
+   $NomeGinasio = ($_POST['NomeGinasio']);
+   $Localidade = ($_POST['Localidade']);
+
+
+
+   $select = " SELECT * FROM ginasio WHERE NomeGinasio = '$NomeGinasio' && Localidade = '$Localidade' ";
+
+   $result = mysqli_query($conn, $select);
+
+   if(mysqli_num_rows($result) > 0){
+
+      $error[] = 'Ja existe esse ginasio!';
+
+   }else{
+
+      if($Localidade != $Localidade){
+         $error[] = 'ja existe essa atividade';
+      }else{
+         $insert = "INSERT INTO atividades(NomeGinasio, Localidade) VALUES('$NomeGinasio','$Localidade')";
+         mysqli_query($conn, $insert);
+
+      }
+   }
+
+};
+
+
+?>
+
+<div class="form-container">
+
+   <form >
+      <h3>Adcionar um ginasio</h3>
+   
+      <input id="NomeGinasio" type="NomeGinasio" name="NomeGinasio" required placeholder="NomeGinasio" >
+      <input id="Localidade" type="Localidade" name="Localidade" required placeholder="Localidade " >
+      <input id="submit" type="button" value="Adcionar " class="form-btn">
+   </form>
+
+</div>
+<?php
+$conn = mysqli_connect('localhost','root','','pap');
+
+
+
+
+if(isset($_POST['submit'])){
+
+   $ID_Ginasio = ($_POST['ID_Ginasio']);
+   $DataAula = ($_POST['DataAula']);
+
+
+
+   $select = " SELECT * FROM atividades WHERE ID_Ginasio = '$ID_Ginasio' && DataAula = '$DataAula' ";
+
+   $result = mysqli_query($conn, $select);
+
+   if(mysqli_num_rows($result) > 0){
+
+      $error[] = 'Ja existe essa atividade!';
+
+   }else{
+
+      if($DataAula != $DataAula){
+         $error[] = 'ja existe essa atividade';
+      }else{
+         $insert = "INSERT INTO atividades(ID_Ginasio, DataAula) VALUES('$ID_Ginasio','$DataAula')";
+         mysqli_query($conn, $insert);
+
+      }
+   }
+
+};
+
+
+?>
+
+<div class="form-container">
+
+   <form >
+      <h3>Adcionar Aulas </h3>
+   
+      <input id="ID_Ginasio" type="ID_Ginasio" name="ID_Ginasio" required placeholder="ID_Ginasio" >
+      <input id="DataAula" type="DataAula" name="DataAula" required placeholder="Data Aula " >
+      <input id="NomeAula" type="NomeAula" name="NomeAula" required placeholder="Nome Aula " >
+      <input id="submit" type="button" value="Adcionar " class="form-btn">
+   </form>
+
+</div>
+<?php
+$conn = mysqli_connect('localhost','root','','pap');
+
+
+
+
+if(isset($_POST['submit'])){
+
+   $ID_Ginasio = ($_POST['ID_Ginasio']);
+   $NomeAtividade = ($_POST['NomeAtividade']);
+
+
+
+   $select = " SELECT * FROM atividades WHERE ID_Ginasio = '$ID_Ginasio' && NomeAtividade = '$NomeAtividade' ";
+
+   $result = mysqli_query($conn, $select);
+
+   if(mysqli_num_rows($result) > 0){
+
+      $error[] = 'Ja existe essa atividade!';
+
+   }else{
+
+      if($NomeAtividade != $NomeAtividade){
+         $error[] = 'ja existe essa atividade';
+      }else{
+         $insert = "INSERT INTO atividades(ID_Ginasio, ID_Ginasio) VALUES('$ID_Ginasio','$ID_Ginasio')";
+         mysqli_query($conn, $insert);
+
+      }
+   }
+
+};
+
+
+?>
+
+<div class="form-container">
+
+   <form >
+      <h3>Adcionar Atividades</h3>
+   
+
+      <input id="ID_Ginasio" type="ID_Ginasio" name="ID_Ginasio" required placeholder="ID_Ginasio" >
+      <input id="NomeAtividade" type="NomeAtividade" name="NomeAtividade" required placeholder="NomeAtividade " >
+      <input id="submit" type="button" value="Adcionar " class="form-btn">
+      <input type="submit" name="submit" value="registo" class="form-btn">
+   </form>
+
+</div>
+
+<script src="login.js"></script>
+
 <script src="admin_page.js"></script>
 </body>
 <script src="admin_page.js"></script>
-
-</html>
+<?php
+include "menu/footer.php";
+?>

@@ -24,6 +24,6 @@ function EValido_TestUtilizadorNaoExiste(){
 
 function testeadminexiste(){
     $utilizador = new Utilizador();
-    $result = $utilizador->UtilizadorEValido("fabio@gmail.com","fabio123");
-    echo "EValido_TestUtilizadorExiste - expected:"."admin"." VS real:".json_encode($result);
+    $result = $utilizador->UtilizadorEValido("rui@gmail.com","202cb962ac59075b964b07152d234b70");
+    echo "EValido_TestUtilizadorExiste - expected:"."user"." VS real:".json_encode($result);
 }
