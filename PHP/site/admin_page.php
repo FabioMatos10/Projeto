@@ -5,59 +5,17 @@ require '../API/Domain/config.php';
 session_start();
 
 
+include "menu/menu.php"
+
+
 
 
 ?>
-   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/style_adminpage.css">
    <link rel="stylesheet" href="menu/style.css">
+   <link rel="stylesheet" href="menu/style1.css">
    
 
-<div class="menu-bar">
-      <h1 class="logo">GYM<span>ENERGY</span></h1>
-      <ul>
-
-
-        <li><a href="#">SOBRE NÓS<i class="fas fa-caret-down"></i></a>
-            <div class="dropdown-menu">
-                <ul>
-                  <li><a href="historia.php">A nossa história</a></li>
-                  <li><a href="pricing.php">Pricing</a></li>
-
-                  <li>
-                </ul>
-              </div>
-        </li>
-        <li><a href="#">GINASIOS<i class="fas fa-caret-down"></i></a>
-          <div class="dropdown-menu">
-              <ul>
-                <li><a href="estarreja_tribo.php">Estarreja</a></li>
-                <li><a href="ovar.php">Ovar</a></li>
-                <li><a href="avanca.php">Avanca </a></li>
-
-                <li>
-              </ul>
-            </div>
-      </li>
-      <li><a href="#">TREINAR<i class="fas fa-caret-down"></i></a>
-        <div class="dropdown-menu">
-            <ul>
-              <li><a href="#">No ginasio</a></li>
-              <li><a href="#">Aulas de grupo</a></li>
-              <li><a href="#">Mapas de aulas </a></li>
-              <li><a href="#">Planos de treino</a></li>
-              <li><a href="#">Personal Training</a></li>
-              <li><a href="nutricao.php">Nutrição</a></li>
-              <li><a id="nomeutilizador"></a></li>
-            </ul>
-          </div>
-      </li>
-        <li><a href="#">NOVIDADES</a>
-        </li> 
-        <li><a href="#">ADESÃO</a></li>
-        <li></li>
-      </ul>
-
-    </div>  
 <div class="container">
 
    <div class="content">
@@ -108,68 +66,94 @@ session_start();
         </div>
         </div>
 
-        <?php
-$conn = mysqli_connect('localhost','root','','pap');
 
 
 
 
-if(isset($_POST['submit'])){
-
-   $NomeGinasio = ($_POST['NomeGinasio']);
-   $Localidade = ($_POST['Localidade']);
+<?php
+ 
 
 
 
-   $select = " SELECT * FROM ginasio WHERE NomeGinasio = '$NomeGinasio' && Localidade = '$Localidade' ";
 
-   $result = mysqli_query($conn, $select);
-
-   if(mysqli_num_rows($result) > 0){
-
-      $error[] = 'Ja existe esse ginasio!';
-
-   }else{
-
-      if($Localidade != $Localidade){
-         $error[] = 'ja existe essa atividade';
-      }else{
-         $insert = "INSERT INTO atividades(NomeGinasio, Localidade) VALUES('$NomeGinasio','$Localidade')";
-         mysqli_query($conn, $insert);
-
-      }
-   }
-
-};
+         if(isset($_POST['adcionar_ginasios'])){
+            echo "<script> alert('Esgaca'); </script>";
+            $conn = mysqli_connect('localhost','root','','pap');
+            $NomeGinasio = ($_POST['NomeGinasio']);
+            $Localidade = ($_POST['Localidade']);
 
 
-?>
+
+         
+            $select = " SELECT * FROM ginasio WHERE NomeGinasio = '$NomeGinasio' && Localidade = '$Localidade' ";
+           
+            $result = mysqli_query($conn, $select);
+
+            if(mysqli_num_rows($result) > 0){
+
+               $error[] = 'Ja existe esse ginasio!';
+
+            }else{
+
+               if($Localidade != $Localidade){
+                  $error[] = 'ja existe essa atividade';
+               }else{
+            
+                  $insert = "INSERT INTO ginasio(NomeGinasio, Localidade) VALUES($NomeGinasio,$Localidade)";
+                  mysqli_query($conn, $insert);
+                 
+               }
+            }
+
+         };
+
+
+         ?>
 
 <div class="form-container">
 
-   <form >
-      <h3>Adcionar um ginasio</h3>
-   
-      <input id="NomeGinasio" type="NomeGinasio" name="NomeGinasio" required placeholder="NomeGinasio" >
-      <input id="Localidade" type="Localidade" name="Localidade" required placeholder="Localidade " >
-      <input id="submit" type="button" value="Adcionar " class="form-btn">
-   </form>
+<form action="" method="post">
+   <h3>Adcionar Ginasios</h3>
+   <?php
+   if(isset($error)){
+      foreach($error as $error){
+         echo '<span class="error-msg">'.$error.'</span>';
+      };
+   };
+   ?>
+   <input type="text" name="NomeGinasio" required placeholder="Digite o seu nome do ginasio">
+   <input type="text" name="Localidade" required placeholder="Digite a localidade">
+
+
+
+   </select>
+   <input type="submit" name="adcionar_ginasios" value="ADCIONAR" class="form-btn">
+
+</form>
 
 </div>
+
+</div>
+
+
+
+
+
 <?php
 $conn = mysqli_connect('localhost','root','','pap');
 
 
 
 
-if(isset($_POST['submit'])){
+if(isset($_POST['adcionar_aula'])){
 
    $ID_Ginasio = ($_POST['ID_Ginasio']);
    $DataAula = ($_POST['DataAula']);
+   $NomeAula = ($_POST['NomeAula']);
 
 
 
-   $select = " SELECT * FROM atividades WHERE ID_Ginasio = '$ID_Ginasio' && DataAula = '$DataAula' ";
+   $select = " SELECT * FROM aulas WHERE ID_Ginasio = '$ID_Ginasio' && DataAula = '$DataAula' && NomeAula = '$NomeAula' ";
 
    $result = mysqli_query($conn, $select);
 
@@ -182,7 +166,7 @@ if(isset($_POST['submit'])){
       if($DataAula != $DataAula){
          $error[] = 'ja existe essa atividade';
       }else{
-         $insert = "INSERT INTO atividades(ID_Ginasio, DataAula) VALUES('$ID_Ginasio','$DataAula')";
+         $insert = "INSERT INTO aulas(ID_Ginasio, DataAula, NomeAula) VALUES('$ID_Ginasio','$DataAula', '$NomeAula')";
          mysqli_query($conn, $insert);
 
       }
@@ -195,72 +179,96 @@ if(isset($_POST['submit'])){
 
 <div class="form-container">
 
-   <form >
-      <h3>Adcionar Aulas </h3>
-   
-      <input id="ID_Ginasio" type="ID_Ginasio" name="ID_Ginasio" required placeholder="ID_Ginasio" >
-      <input id="DataAula" type="DataAula" name="DataAula" required placeholder="Data Aula " >
-      <input id="NomeAula" type="NomeAula" name="NomeAula" required placeholder="Nome Aula " >
-      <input id="submit" type="button" value="Adcionar " class="form-btn">
-   </form>
+<form action="" method="post">
+   <h3>Adcionar Aulas</h3>
+   <?php
+   if(isset($error)){
+      foreach($error as $error){
+         echo '<span class="error-msg">'.$error.'</span>';
+      };
+   };
+   ?>
+   <input type="ID_Ginasio" name="ID_Ginasio" required placeholder="Digite o seu ID_Ginasio">
+   <input type="NomeAtividade" name="NomeAtividade" required placeholder="Nome da Atividade">
+   <input type="NomeAula" name="NomeAula" required placeholder="Nome da Aula">
+
+
+   </select>
+   <input type="submit" name="adcionar_aula" value="adcionar" class="form-btn">
+
+</form>
 
 </div>
-<?php
-$conn = mysqli_connect('localhost','root','','pap');
+</div>
 
 
 
 
-if(isset($_POST['submit'])){
 
-   $ID_Ginasio = ($_POST['ID_Ginasio']);
-   $NomeAtividade = ($_POST['NomeAtividade']);
-
+         <?php
+         $conn = mysqli_connect('localhost','root','','pap');
 
 
-   $select = " SELECT * FROM atividades WHERE ID_Ginasio = '$ID_Ginasio' && NomeAtividade = '$NomeAtividade' ";
-
-   $result = mysqli_query($conn, $select);
-
-   if(mysqli_num_rows($result) > 0){
-
-      $error[] = 'Ja existe essa atividade!';
-
-   }else{
-
-      if($NomeAtividade != $NomeAtividade){
-         $error[] = 'ja existe essa atividade';
-      }else{
-         $insert = "INSERT INTO atividades(ID_Ginasio, ID_Ginasio) VALUES('$ID_Ginasio','$ID_Ginasio')";
-         mysqli_query($conn, $insert);
-
-      }
-   }
-
-};
 
 
-?>
+         if(isset($_POST['adcionar_ativ'])){
+
+            $ID_Ginasio = ($_POST['ID_Ginasio']);
+            $NomeAtividade = ($_POST['NomeAtividade']);
+
+
+
+            $select = " SELECT * FROM atividades WHERE ID_Ginasio = '$ID_Ginasio' && NomeAtividade = '$NomeAtividade' ";
+
+            $result = mysqli_query($conn, $select);
+
+            if(mysqli_num_rows($result) > 0){
+
+               $error[] = 'Ja existe essa atividade!';
+
+            }else{
+
+               if($NomeAtividade != $NomeAtividade){
+                  $error[] = 'ja existe essa atividade';
+               }else{
+                  $insert = "INSERT INTO atividades(ID_Ginasio, ID_Ginasio) VALUES('$ID_Ginasio','$ID_Ginasio')";
+                  mysqli_query($conn, $insert);
+
+               }
+            }
+
+         };
+
+
+         ?>
 
 <div class="form-container">
 
-   <form >
-      <h3>Adcionar Atividades</h3>
-   
+<form action="" method="post">
+   <h3>Adcionar Atividade</h3>
+   <?php
+   if(isset($error)){
+      foreach($error as $error){
+         echo '<span class="error-msg">'.$error.'</span>';
+      };
+   };
+   ?>
+   <input type="ID_Ginasio" name="ID_Ginasio" required placeholder="Digite o seu ID_Ginasio">
+   <input type="NomeAtividade" name="NomeAtividade" required placeholder="Nome da Atividade">
 
-      <input id="ID_Ginasio" type="ID_Ginasio" name="ID_Ginasio" required placeholder="ID_Ginasio" >
-      <input id="NomeAtividade" type="NomeAtividade" name="NomeAtividade" required placeholder="NomeAtividade " >
-      <input id="submit" type="button" value="Adcionar " class="form-btn">
-      <input type="submit" name="submit" value="registo" class="form-btn">
-   </form>
+
+
+   </select>
+
+   <input type="submit" name="adcionar_ativ" value="adcionar" class="form-btn">
+ 
+</form>
 
 </div>
 
-<script src="login.js"></script>
+      </div>
 
-<script src="admin_page.js"></script>
-</body>
-<script src="admin_page.js"></script>
+
 <?php
-include "menu/footer.php";
+include "menu/footer.php"
 ?>
