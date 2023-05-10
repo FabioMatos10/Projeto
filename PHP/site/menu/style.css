@@ -14,10 +14,12 @@ body {
 .logo {
   color: var(--color-white);
   font-size: 30px;
+  text-decoration: none !important;
 }
 
 .logo span {
   color: greenyellow;
+  text-decoration: none !important;
 }
 
 .menu-bar {

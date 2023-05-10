@@ -50,43 +50,65 @@ include "./menu/menu1.php";
         <ul class="options"></ul>
       </div>
     </div>
-    <br><br><br><br><br><br>
+    <br><br><br><br>
  </div>
 <br><br>
- <div class="split left">
-  <div class="centered">
+<a name="Treinadores"></a>
+   
+   <section class="trainers">
+       <h1>GERENTES DO GYMENERGY</h1>
+       <div class="items">
+        
+           <div class="item">
+               <img src="./images/cbum.jpg">
+               <div class="inner">
+                   <div class="info">
+                       <h4>Cbum</h4>
+                       <p>Gerente da tribo Avanca </p>
+                       <div class="links">
+                           <a href="https://www.facebook.com/search/photos/?q=cbum&sde=Abr_hVNjMiuu8sjiWgXiHCoxOKZuMg7U5bdwXY0-5Bi7zfn2YJNNUxHqVE_0ETUSaOaek83itdM1KQ0vNCCEUKbu"><i class="fab fa-facebook"></i></a>
+                           <a href=""><i class="fab fa-twitter"></i></a>
+                           <a href="https://www.instagram.com/cbum/"><i class="fab fa-instagram"></i></a>
+                           <a href="https://www.youtube.com/watch?v=v1BKT_eIYDQ&t=7s"><i class="fab fa-youtube"></i></a>
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <div class="item">
+               <img src="./images/ramom1.jpg">
+               <div class="inner">
+                   <div class="info">
+                       <h4>Ramom Dino</h4>
+                       <p>Gerente da tribo Ovar </p>
+                       <div class="links">
+                           <a href="https://www.facebook.com/jader.hernandesbolivar"><i class="fab fa-facebook"></i></a>
+                           <a href=""><i class="fab fa-twitter"></i></a>
+                           <a href="https://www.instagram.com/ramondinopro/"><i class="fab fa-instagram"></i></a>
+                           <a href="https://www.youtube.com/watch?v=gvEsVAyL3kM"><i class="fab fa-youtube"></i></a>
+                       </div>
+                   </div>
+               </div>
+           </div>
+           <div class="item">
+               <img src="./images/MUZY.jpg">
+               <div class="inner">
+                   <div class="info">
+                       <h4>Paulo Mouz</h4>
+                       <p>Gerente da tribo Estarreja </p>
+                       <div class="links">
+                           <a href="https://www.facebook.com/search/top?q=paulo%20muzy"><i class="fab fa-facebook"></i></a>
+                           <a href=""><i class="fab fa-twitter"></i></a>
+                           <a href="https://www.instagram.com/paulomuzy/"><i class="fab fa-instagram"></i></a>
+                           <a href="https://www.youtube.com/watch?v=54YsWKvl9gY"><i class="fab fa-youtube"></i></a>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       
+       </div>
+   </section>
 
-    <h2></h2>
-    <p></p>
-  </div>
-</div>
-
-<div class="split right">
-  <div class="centered">
-    <h2> </h2>
-    <p></p>
-  </div>
-</div>
-
-<br> <br><br><br><br><br><br> <br><br><br><br><br><br> <br><br><br><br><br><br> <br><br><br><br><br><br>
-<br> <br><br><br><br><br><br><br><br>
-<div class="split left">
-
-
-    <h2>PILATES</h2>
-
-  </div>
-
-
-<div class="split right">
-  <div class="centered">
-
-  <h2>PILATES</h2>>
-  </div>
-</div>
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br>
+<br><br><br><br><br>
 
 <div class="testi_section">
   <h1 class="heading">Algumas opniões</h1>

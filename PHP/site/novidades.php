@@ -4,18 +4,14 @@ include "menu/menu.php"
 
 ?>
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+   
 
 
     
-  </head>
+
     <link rel="stylesheet" href="style7.css" />
-    <title>GYMENERGY</title>
-  </head>
-  <body>
+
 
   <section class="about">
         <div class="row">
@@ -50,7 +46,7 @@ include "menu/menu.php"
             <img src="./images/creatina.jpg">
             </div>
             <div class="content">
-                <h1>PISTA DE SPRINT</h1>
+                <h1>Creatinina</h1>
 
 
               <P>  A creatinina é um produto da degradação da fosfocreatina (creatina fosforilada) no músculo, e é geralmente produzida em uma taxa praticamente constante pelo corpo — taxa diretamente proporcional à massa muscular da pessoa: quanto maior a massa muscular, maior a taxa.</P>
@@ -101,6 +97,9 @@ include "menu/menu.php"
         </div>
     </section>
     </div>
+
+
+</script>
   
     <script src="script.js"></script>
     

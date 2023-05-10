@@ -1,6 +1,6 @@
 if (document.cookie.indexOf('nome') >-1 ) {
-    document.getElementById('nomeutilizador').innerHTML = getCookie(document.cookie.indexOf('nome'));
-
+    document.getElementById('registoutilizador').remove();
+    document.getElementById('registoutilizador').innerHTML = getCookie(document.cookie.indexOf('nome'));
 }
 
 function getCookie(nome) {

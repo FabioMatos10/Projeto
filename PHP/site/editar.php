@@ -2,15 +2,14 @@
     session_start();
     require '../API/Domain/config.php';
 ?>
+<?php
+include "menu/menu.php"
 
-<html>
-<head>
-    <meta charset='UTF-8'/>
-    <title></title>
+?>
+
     <link rel="stylesheet" href="css\style_edit.css">
-</head>
 
-<body>
+
     <?php
         if(isset($_GET["id"])):
             $ID_Utilizadores = $_GET["id"];
@@ -26,7 +25,7 @@
             $password = $_POST["password"];
             $password = $_POST["permissao"];
 
-            $alterar = $pdo->runQuery("UPDATE utilizador SET nome='$nome' , email='$email' , password='$password' , permissao='$permissao' WHERE ID_Utilizadores='$ID_Utilizadores'");
+            $alterar = $conexao->runQuery("UPDATE utilizador SET nome='$nome' , email='$email' , password='$password' , permissao='$permissao' WHERE ID_Utilizadores='$ID_Utilizadores'");
             $alterar->execute();
 
             if($alterar):
@@ -41,7 +40,7 @@
         <div class="login">
             
             <div>
-                <img src="logo.png">
+       
             </div>
 
             <form method="post">
@@ -55,5 +54,7 @@
         </div>
     </section>
 
-</body>
-</html>
+
+    <?php
+include "menu/footer.php"
+?>

@@ -20,7 +20,7 @@ include "menu/menu.php"
 
    <div class="content">
       <h3>Ola, <span>admin</span></h3>
-      <h1>Boas <span id="nomeutilizador"></span></h1>
+      <h1>Boas <p id="nomeutilizador"></p></h1>
       <p>Aqui só estão os maiores</p>
       <a href="login_form.php" class="btn">login</a>
       <a href="register_form.php" class="btn">register</a>
@@ -65,8 +65,7 @@ include "menu/menu.php"
             </table>
         </div>
         </div>
-
-
+        <script type="text/javascript" src="admin_page.js"></script>
 
 
 
@@ -272,3 +271,4 @@ if(isset($_POST['adcionar_aula'])){
 <?php
 include "menu/footer.php"
 ?>
+

@@ -11,11 +11,8 @@ include "menu/menu.php"
 
 
     
-  </head>
+
     <link rel="stylesheet" href="style.css" />
-    <title>GYMENERGY</title>
-  </head>
-  <body>
 
 
 

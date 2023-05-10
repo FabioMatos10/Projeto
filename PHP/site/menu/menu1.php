@@ -16,7 +16,7 @@
 
 
     <div class="menu-bar">
-      <h1 class="logo">GYM<span>ENERGY</span></h1>
+      <h1 class="logo"><a href="index.php">GYM<span>ENERGY</span></h1>
       <ul>
 
 
@@ -55,8 +55,10 @@
         <li><a href="novidades.php">NOVIDADES</a>
         </li> 
         <li><a href="register_form.php">REGISTO</a></li>
+        <li id="registoutilizador"></li>
       </ul>
 
     </div>  
 
     <div class="hero">
+    <script type="text/javascript" src="menu.js"></script>
