@@ -90,15 +90,14 @@ include "menu/menu.php"
 
             if(mysqli_num_rows($result) > 0){
 
-               $error[] = 'Ja existe esse ginasio!';
-
             }else{
 
                if($Localidade != $Localidade){
                   $error[] = 'ja existe essa atividade';
                }else{
             
-                  $insert = "INSERT INTO ginasio(NomeGinasio, Localidade) VALUES($NomeGinasio,$Localidade)";
+                  $insert = "INSERT INTO ginasio(NomeGinasio, Localidade) VALUES('$NomeGinasio','$Localidade')";
+                  
                   mysqli_query($conn, $insert);
                  
                }
@@ -230,7 +229,7 @@ if(isset($_POST['adcionar_aula'])){
                if($NomeAtividade != $NomeAtividade){
                   $error[] = 'ja existe essa atividade';
                }else{
-                  $insert = "INSERT INTO atividades(ID_Ginasio, ID_Ginasio) VALUES('$ID_Ginasio','$ID_Ginasio')";
+                  $insert = "INSERT INTO atividades(ID_Ginasio, NomeAtividade) VALUES('$ID_Ginasio','$NomeAtividade')";
                   mysqli_query($conn, $insert);
 
                }

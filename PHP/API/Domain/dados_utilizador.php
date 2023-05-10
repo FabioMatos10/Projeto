@@ -1,6 +1,6 @@
 <?php
 require 'config.php';
-session_start();
+
 
 class Utilizador {
 
@@ -28,8 +28,38 @@ class Utilizador {
          
          }
       }
-        }
+        
 
+        function novoresgisto($nome,  $email, $pass,  $cpass){
+               $conexao = new Conexao();
+      
+               $stmt = $conexao->runQuery('SELECT * FROM utilizador WHERE email = :email');
+               $stmt->execute(array(':email' => $email));
+               $data = $stmt->fetch(PDO::FETCH_ASSOC);
+               
+               if($pass != $cpass){          
+                  return "palavraspassesdiferentes";
+               }else{
+                     
+
+               if ($data == false) {
+                  try{
+                     $stmt = $conexao->runQuery('INSERT INTO utilizador (nome, email, password, permissao) VALUES (:nome, :email,:password, :permissao)');
+                     $stmt->execute(array(':nome' => $nome, ':email' => $email,':password' => $pass, ':permissao' => "user"));
+      
+                     return "true";
+                  }catch(PDOExtrueception $e){
+                     echo $erroConexao;
+                  }
+      
+                  
+               }else{
+                  return "utilizadorjaexiste";
+               }
+            }
+         }
+    
+      }
 ?>
 
 
