@@ -51,12 +51,24 @@
               <li>
             </ul>
           </div>
+          
       </li>
-        <li><a href="novidades.php">NOVIDADES</a>
+        <li id="dropUtilizador"><a href="novidades.php">NOVIDADES</a>
         </li> 
-        <li><a href="register_form.php">REGISTO</a></li>
-        <li id="registoutilizador"></li>
-      </ul>
+        
+        <li><a id="registo" href="register_form.php">REGISTO<i id="editar_icon" class="fas fa-caret-down"></i></a>
+        <div id="remover_drop"class="dropdown-menu">
+            <ul>
+
+              <li><a id="drop_perfil" href="editar_perfil.php">Perfil</a></li>
+              <li><a id="drop_sair"href="sair.php">Sair</a></li>
+       
+              <li>
+            </ul>
+          </div>
+          
+      </li>
+
 
     </div>  
 

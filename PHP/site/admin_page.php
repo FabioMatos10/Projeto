@@ -72,9 +72,6 @@ include "menu/menu.php"
 <?php
  
 
-
-
-
          if(isset($_POST['adcionar_ginasios'])){
   
             $conn = mysqli_connect('localhost','root','','pap');
