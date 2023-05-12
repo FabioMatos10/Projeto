@@ -22,6 +22,7 @@ class Utilizador {
                     
                         $guardarutilizador=array('ID_Utilizadores' => $row['ID_Utilizadores'],'nome' => $row['nome'],'email' => $row['email'],'password' => $row['password'],'permissao' => $row['permissao']);
                         return $guardarutilizador;
+                        
             }else{
                return $false;
             }
