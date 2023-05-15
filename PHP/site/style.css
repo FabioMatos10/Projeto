@@ -16,6 +16,9 @@ body {
   color: var(--color-white);
   font-size: 30px;
 }
+.logo a{
+  color: black;
+}
 
 .logo span {
   color: greenyellow;
@@ -287,6 +290,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  left: 100px;
 }
 .about2 .row2 .content2{
   flex: 1 1 40rem;
@@ -724,7 +728,7 @@ footer {
 .footer-distributed .footer-center i {
   background-color: #33383b;
   color: #ffffff;
-  font-size: 25px;
+  font-size: 35px;
   width: 38px;
   height: 38px;
   border-radius: 50%;
@@ -792,7 +796,7 @@ footer {
   cursor: pointer;
   background-color: #33383b;
   border-radius: 2px;
-  font-size: 20px;
+  font-size: 35px;
   color: #ffffff;
   text-align: center;
   line-height: 35px;

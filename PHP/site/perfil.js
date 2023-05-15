@@ -14,19 +14,21 @@ $(document).ready(function(){
         cache: false,
         dataType: 'json',
         success: function(resposta) {
-    alert("esgaca");
 
           if(resposta[0]== false){
             alert("erro na conexao da base de dados, há esgaca")
           }else{
+
             document.getElementById('nome').value = resposta['nome'];
             document.getElementById('password').value = resposta['password'];
+            document.getElementById('ID_Utilizadores').value = resposta['ID_Utilizadores'];
+            document.getElementById('ID_Utilizadores').style.display="none";
 
           }
         }
     });
 
-    function getCookie(idCookie) {
+    function getCookie(ID_Utilizadores) {
       let cookie = {};
       document.cookie.split(';').forEach(function(separar) {
           let [key,value] = separar.split('=');
@@ -37,4 +39,15 @@ $(document).ready(function(){
 });
 
 
+function guardarcokies() { 
+  
+  var date = new Date();
+  var getdate = date.getTime();
+  var expirarCookie = getdate + 1000*1296;       
+  date.setTime(expirarCookie);
 
+  document.cookie = "nome= "+document.getElementById('alterar').value+';expires='+date.toUTCString()+"; secure=true"+';path=/';
+  document.cookie = "password= "+document.getElementById('password').value+';expires='+date.toUTCString()+"; secure=true"+';path=/';
+
+
+}

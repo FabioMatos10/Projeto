@@ -45,6 +45,7 @@
 .container .content p{
    font-size: 25px;
    margin-bottom: 20px;
+   color: black;
 }
 
 .container .content .btn{

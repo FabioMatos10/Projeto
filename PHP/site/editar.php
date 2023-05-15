@@ -4,8 +4,6 @@
 ?>
 <?php
 include "menu/menu.php";
-
-
 ?>
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <link rel="stylesheet" href="css\style_edit.css">
@@ -14,6 +12,7 @@ include "menu/menu.php";
     <?php
         if(isset($_GET["id"])):
             $ID_Utilizadores = $_GET["id"];
+        
         endif;
         $conexao = new Conexao();
         $listar = $conexao->runQuery("SELECT * FROM utilizador WHERE ID_Utilizadores='$ID_Utilizadores'");
@@ -39,10 +38,7 @@ include "menu/menu.php";
 
     <section class="area-login">
         <div class="login">
-            
-            <div>
-       
-            </div>
+
             <h1>Editar dados</h1>
             <form method="post">
                 <input type="text" name="nome" placeholder="nome" value="<?php echo $lista["nome"]; ?>" autofocus>
@@ -55,6 +51,8 @@ include "menu/menu.php";
         </div>
     </section>
 
-    <?php
-include "menu/footer.php"
+
+<?php
+
+include "menu/footer.php";
 ?>

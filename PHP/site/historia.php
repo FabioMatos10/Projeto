@@ -19,7 +19,7 @@ include "menu/menu.php"
     <section class="about1">
         <div class="row1">
             <div class="image1">
-            <img src="./images/about.jpg">
+            <img src="./images/muzy1.jpg">
             </div>
             <div class="content1">
 
@@ -35,7 +35,7 @@ include "menu/menu.php"
       <section class="about2">
         <div class="row2">
             <div class="image2">
-            <img src="./images/about.jpg">
+            <img src="./images/tio.jpg">
             </div>
             <div class="content2">
 

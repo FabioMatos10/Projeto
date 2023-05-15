@@ -51,6 +51,11 @@ body{
     
 }
 
+
+.login h1{
+    color: greenyellow;
+}
+
 input::placeholder{
 
     font-size: 14px;

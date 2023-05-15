@@ -13,7 +13,7 @@
   </head>
   <body>
     <div class="menu-bar">
-    <h1 class="logo"><a href="index.php">GYM<span>ENERGY</span></h1>
+    <h1 class="logo"><a href="index.php" style="text-decoration: none;">GYM<span>ENERGY</span></h1>
       <ul>
 
         <li><a href="#">SOBRE NÓS<i class="fas fa-caret-down"></i></a>

@@ -1,5 +1,6 @@
 
     <link rel="stylesheet" href="style1.css" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
 <footer class="footer-distributed">
 
@@ -7,17 +8,15 @@
             <h3>Gym<span>Energy</span></h3>
 
             <p class="footer-links">
-                <a href="#">No ginasio</a>
+                <a href="historia.php">SOBRE NÓS</a>
                 |
-                <a href="#">GINASIOS</a>
+                <a href="estarreja_tribo.php">GINASIOS</a>
                 |
-                <a href="#">TREINAR</a>
+                <a href="planos_treinos.php">TREINAR</a>
                 |
-                <a href="#">NOVIDADES</a>
-                  |
-                <a href="#">ADESÃO</a>
-                |
-                <a href="#">Registo</a>
+                <a href="novidades.php">NOVIDADES</a>
+                |           
+                <a href="register_form.php">REGISTO</a>
 
             </p>
 
