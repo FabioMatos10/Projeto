@@ -9,6 +9,7 @@ include "menu/menu.php"
 <div class="form-container">
 
    <form>
+      
       <h3>Registo</h3>
 
       <input id="nome" type="nome" name="nome" required placeholder="Digite o seu nome">

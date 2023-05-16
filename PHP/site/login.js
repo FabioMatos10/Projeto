@@ -14,7 +14,7 @@ $(document).ready(function() {
             dataType: "json",
             success: function(resposta) {
                 if (resposta[0] == "false"){
-                    alert ("Algo de errado, nao está certo");
+                    alert ("PASSWORD OU EMAIL ESTÃO INCORRETOS");
                 }else{
                     cookies(resposta);
                 }

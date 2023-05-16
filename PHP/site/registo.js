@@ -21,9 +21,17 @@ $(document).ready(function() {
             dataType: "json",
             success: function(resposta) {
               if (resposta == "true"){
-
                 location.href="login_form.php";
               }
+              if(resposta == "palavraspassesdiferentes"){
+                alert("Email ou passwords incorretos!");
+              }else{
+                console.log(resposta);
+              }
+                
+                
+  
+
             
               }
         });

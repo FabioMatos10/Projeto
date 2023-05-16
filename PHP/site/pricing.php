@@ -1,6 +1,7 @@
 
 
 <?php
+// este include serve para economizar codigo, e vai buscar a pasta onde esta footer e menu
 include "menu/menu.php"
 
 ?>
@@ -21,7 +22,7 @@ include "menu/menu.php"
       <h1 >ESCOLHE O MELHOR PLANO PARA TI</h1>
     </center>
       <br><br><br><br><br>
-
+<!--  pricos do ginasios -->
     <div class="pricing-table">
       <div class="pricing-card">
         <h3 class="pricing-card-header">Weekend Free</h3>

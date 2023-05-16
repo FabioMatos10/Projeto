@@ -50,7 +50,7 @@ class Utilizador {
       
                      return "true";
                   }catch(PDOExtrueception $e){
-                     echo $erroConexao;
+                     return "erroConexao";
                   }
       
                   

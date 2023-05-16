@@ -102,8 +102,8 @@
 }
 
 .form-container form .form-btn{
-   background: #fbd0d9;
-   color:yellowgreen;
+   background: yellowgreen;
+   color: white;
    text-transform: capitalize;
    font-size: 20px;
    cursor: pointer;

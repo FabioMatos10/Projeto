@@ -39,6 +39,9 @@ include "menu/menu.php"
                 <th>nome</th>
                 <th>email</th>
                 <th>password</th>
+                <th>Permissão</th>
+                <th>Remover</th>
+                <th>Editar</th>
 
                 </tr>
             </thead>

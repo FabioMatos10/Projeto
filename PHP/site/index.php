@@ -1,4 +1,5 @@
 <?php
+// este include serve para economizar codigo, e vai buscar a pasta onde esta footer e menu
 include "./menu/menu1.php";
 
 ?>
@@ -8,7 +9,10 @@ include "./menu/menu1.php";
 
    <br><br><br><br><br><br><br>
    <br><br><br><br><br><br><br>     <br><br><br><br><br>   <br><br><br><br><br><br><br>  <br><br><br><br><br><br><br>   <br><br><br><br><br><br><br>
-      <section class="about">
+     
+<!-- NÓS SOMOS A TRIBO ENERGY  -->
+   <section class="about">
+
         <div class="row">
             <div class="image">
             <img src="./images/about.jpg">
@@ -18,7 +22,7 @@ include "./menu/menu1.php";
                   A TRIBO ENERGY</h1>
                 <p>Vem conhecer a nossa história.</p>
                 <p>   Vais adorar tanto quanto nós.</p>
-               
+
             </div>
         </div>
     </section>
@@ -27,7 +31,8 @@ include "./menu/menu1.php";
 
 <div></div>
 <br><br><br><br><br><br><br>   <br><br><br><br><br><br><br>  <br><br><br><br><br><br><br>   <br><br><br><br><br><br><br>  <br><br><br><br><br><br><br>   <br><br><br><br><br><br><br>
-    <div class="cor_check">
+<!-- regiao que o utilizador deseja -->
+<div class="cor_check">
       <br><br><br><br><br><br>
       <center>
       <h1 class="cor_letra">HÁ SEMPRE UM FITNESS ENERGY PERTO DE TI</h1>
@@ -35,7 +40,7 @@ include "./menu/menu1.php";
       <p class="cor_p">São mais de 10 ginásios espalhados pelo país</p>
     </center>
     <div class="tag">
-    
+
 
       <div class="select-btn">
 
@@ -53,12 +58,15 @@ include "./menu/menu1.php";
     <br><br><br><br>
  </div>
 <br><br>
+
+
+<!-- treinadores -->
 <a name="Treinadores"></a>
-   
+
    <section class="trainers">
        <h1>GERENTES DO GYMENERGY</h1>
        <div class="items">
-        
+
            <div class="item">
                <img src="./images/cbum.jpg">
                <div class="inner">
@@ -104,12 +112,12 @@ include "./menu/menu1.php";
                    </div>
                </div>
            </div>
-       
+
        </div>
    </section>
 
 <br><br><br><br><br>
-
+<!-- comentarios de pessoas sobre a tribo ENERGY -->
 <div class="testi_section">
   <h1 class="heading">Algumas opniões</h1>
 <br><br><br>
@@ -136,7 +144,7 @@ include "./menu/menu1.php";
           </div>
       </div>
       <div class="testi_card">
-      
+
         <p>"Bom ginasio, bons equipamentos."</p>
           <div class="test_person">
               <img src="./images/pg1.jpg" width="50px">
@@ -147,7 +155,7 @@ include "./menu/menu1.php";
           </div>
       </div>
       <div class="testi_card">
-      
+
         <p>"Bom ginasio, bons equipamentos."</p>
         <div class="test_person">
             <img src="./images/pg1.jpg" width="50px">
@@ -158,7 +166,7 @@ include "./menu/menu1.php";
         </div>
     </div>
     <div class="testi_card">
-      
+
       <p>"Bom ginasio, bons equipamentos."</p>
       <div class="test_person">
           <img src="./images/pg1.jpg" width="50px">
@@ -169,7 +177,7 @@ include "./menu/menu1.php";
       </div>
   </div>
   <div class="testi_card">
-      
+
     <p>"Bom ginasio, bons equipamentos."</p>
     <div class="test_person">
         <img src="./images/pg1.jpg" width="50px">
@@ -198,7 +206,7 @@ include "./menu/menu1.php";
 
   <img class="fotos"  width="300px" src="./images/slb.png" >
 
-  
+
 
     <div class="wrapper">
       <img src="images/cookies.png.png" alt="">
@@ -215,23 +223,23 @@ include "./menu/menu1.php";
       const cookieBox = document.querySelector(".wrapper"),
       acceptBtn = cookieBox.querySelector("button");
       acceptBtn.onclick = ()=>{
-      
+
         document.cookie = "CookieBy=CodingNepal; max-age="+60*60*24*30;
-        if(document.cookie){ 
-          cookieBox.classList.add("hide"); 
-        }else{ 
+        if(document.cookie){
+          cookieBox.classList.add("hide");
+        }else{
           alert("Cookie can't be set! Please unblock this site from the cookie setting of your browser.");
         }
       }
       let checkCookie = document.cookie.indexOf("CookieBy=CodingNepal");
- 
+
       checkCookie != -1 ? cookieBox.classList.add("hide") : cookieBox.classList.remove("hide");
     </script>
 </body>
-
-
+<!-- link para ir buscar o js da parte do utilizador ver se existe a sua regiao que quer -->
     <script src="script.js"></script>
  <?php
+ // este include serve para economizar codigo, e vai buscar a pasta onde esta footer e menu
 include "menu/footer.php";
 
 ?>

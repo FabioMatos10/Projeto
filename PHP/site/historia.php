@@ -1,5 +1,6 @@
 
 <?php
+// este include serve para economizar codigo, e vai buscar a pasta onde esta footer e menu
 include "menu/menu.php"
 
 ?>
@@ -14,7 +15,7 @@ include "menu/menu.php"
 
     <link rel="stylesheet" href="style.css" />
 
-
+<!-- sobre a tribo ENERGY, clases em css para poder alterar o texto e a imagem  -->
 
     <section class="about1">
         <div class="row1">
@@ -23,9 +24,9 @@ include "menu/menu.php"
             </div>
             <div class="content1">
 
-                <p> No habitat da Tribo UP vivem dragões, reis e rainhas. Entre chamas, impera a bgarra e a força! Nos nossos castelos encantados, reina a inspiração para que, todos juntos, possamos criar um mundo melhor. Um mundo Solidário, Sustentável, de Superação e Inclusão.</p>
-                <p> Esta foi a premissa para o nosso surgimento em 2012. Através de um sonho gigantesco criámos um movimento singular no panorama do fitness nacional. De braços dados, fomos reunindo cada vez mais elementos que se reviam nesta forma de estar na vida.</p>
-                <p> E agora, contamos com a maior tribo social do país que chama de 2ª casa cada Fitness UP que visita. Casas energizantes, sustentáveis, artisticamente esculpidas para iniciantes e profissionais do desporto. Tudo isto porque acreditamos que Tornar Acessível a Todos o Fitness de Alta Qualidade é um direito universal.</p>
+                <p> No habitat da Tribo ENERGY vivem leões, reis e rainhas. Entre chamas, impera a garra e a força! Nos nossos castelos encantados, reina a inspiração para que, todos juntos, possamos criar um mundo melhor. Um mundo Solidário, Sustentável, de Superação e Inclusão.</p>
+                <p> Esta foi a premissa para o nosso surgimento em 2022. Através de um sonho  criámos um movimento singular no panorama do fitness internacional. De mãos dados, fomos reunir cada vez mais elementos que se reviam nesta forma de estar na vida.</p>
+                <p> E agora, temos a ambição de nos tornarmos e de sermos uma das melhores tribos em portugal e no mundo inteiro.</p>
             </div>
         </div>
     </section>
@@ -39,14 +40,15 @@ include "menu/menu.php"
             </div>
             <div class="content2">
 
-                <p>Sonhar é humano e nós sonhamos todos os dias. Sonhamos com um mundo melhor, com mais justiça e com mais liberdade. Sonhamos com um mundo onde não se vê a cor, o sexo ou a religião. Sonhamos, acima de tudo, com um mundo igual e com oportunidades iguais.</p>
-                <p>Acreditamos que a construção do futuro é uma obra feita a várias mãos. Acreditamos na igualdade de oportunidades e acreditamos em proteger. E foi assim que, até agora, conseguimos que aqui, na Tribo UP, coubessem todos. Aceitamos o desafio de só contar com vencedores dentro da Tribo UP. E só vamos parar quando o nosso dever estiver cumprido. Vamos mais longe, vamos onde tivermos que ir. Mas vamos. Sempre! Lado a lado, de mãos dadas, por vezes ao colo, se assim tiver que ser.</p>
-                <p>E agora, contamos com a maior tribo social do país que chama de 2ª casa cada Fitness UP que visita. Casas energizantes, sustentáveis, artisticamente esculpidas para iniciantes e profissionais do desporto. Tudo isto porque acreditamos que Tornar Acessível a Todos o Fitness de Alta Qualidade é um direito universal.</p>
+                <p>Sonhar é humano e nós a tribo ENERGY sonhamos todos os dias. Sonhamos com um mundo melhor, com mais justiça, com mais dignidade, com mais perfeccionismo e com mais liberdade. Sonhamos com um mundo melhor onde nao haja distinção de nada, todos tem oportinade de vir para a tribo ENERGY.</p>
+                <p>Acreditamos na igualdade de oportunidades e acreditamos em proteger o vosso melhor. Com esta iniciativa a Tribo ENERGY,  tentamos coubesser todos. Aceitamos o desafio de só contar com vencedores dentro da Tribo ENERGY. E só vamos parar quando o nosso dever estiver cumprido, caso este nunca vai ser comprido pois temos varios objetivos e quando acabarem este vai haver mais. Vamos mais longe, vamos onde tivermos que ir. Mas vamos. Sempre! Lado a lado, de mãos dadas, por vezes ao colo, se assim tiver que ser.</p>
+                <p>E agora, vamos tentar ser a melhor tribo em Portugal e no mundo. Tudo isto porque acreditamos que Tornar Acessível a Todos o Fitness de Alta Qualidade.</p>
                
             </div>
         </div>
     </section>
     </div>
+    <!-- frase para ter um treino de graca, clase para poder mudar o estilo do texto  -->
     <div class="cor_check">
         <br><br><br><br><br><br>
         <center>
