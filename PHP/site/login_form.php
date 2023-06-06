@@ -6,6 +6,8 @@ session_start();
 
 
    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
 
 
 
@@ -15,7 +17,7 @@ session_start();
 
 
 <?php
-include "./menu/menu1.php";
+include "./menu/menu.php";
 ?>
 
 <div class="form-container">

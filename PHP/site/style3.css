@@ -44,7 +44,7 @@
   }
   
   .pricing-card-header{
-    background-color: yellowgreen;
+    background-color: #2ecc71;
     display: inline-block;
     color: #fff;
     padding: 12px 30px;
@@ -59,7 +59,7 @@
   
   .price{
     font-size: 70px;
-    color: yellowgreen;
+    color: #2ecc71;
     margin: 40px 0;
     transition: .2s linear;
   }

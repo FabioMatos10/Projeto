@@ -2,9 +2,13 @@
 <?php
 include "menu/menu.php"
 ?>
+   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="style.css">
-   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
 
 <div class="form-container">
 
@@ -19,7 +23,7 @@ include "menu/menu.php"
 
 
       </select>
-      <input id="submit" type="button" value="login " class="form-btn">
+      <input id="submit" type="button" value="Registo " class="form-btn">
       <p>Já tem conta? <a href="login_form.php">Login</a></p>
    </form>
 

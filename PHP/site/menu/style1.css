@@ -41,7 +41,7 @@ footer {
   
   
   .footer-distributed h3 span {
-    color: greenyellow;
+    color: #2ecc71;
   }
   
   /* Footer links */
@@ -104,7 +104,7 @@ footer {
   }
   
   .footer-distributed .footer-center p a {
-    color: greenyellow;
+    color: #2ecc71;
     text-decoration: none;
     ;
   }
@@ -125,7 +125,7 @@ footer {
   
   .footer-distributed .footer-company-about span {
     display: block;
-    color: greenyellow;
+    color: #2ecc71;
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 20px;

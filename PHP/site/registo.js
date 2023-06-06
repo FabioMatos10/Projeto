@@ -23,11 +23,16 @@ $(document).ready(function() {
               if (resposta == "true"){
                 location.href="login_form.php";
               }
-              if(resposta == "palavraspassesdiferentes"){
-                alert("Email ou passwords incorretos!");
-              }else{
+              if(resposta=="vazio"){
+                toastr.warning('Existem campos por prencher', 'Woops!!!');
                 console.log(resposta);
               }
+              
+              if(resposta == "palavraspassesdiferentes"){
+                toastr.warning('Palavras passes erradas!', 'Woops!!!');
+              }
+ 
+              
                 
                 
   

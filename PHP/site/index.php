@@ -4,11 +4,8 @@ include "./menu/menu1.php";
 
 ?>
 
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
     <link rel="stylesheet" href="style.css" />
-
-   <br><br><br><br><br><br><br>
-   <br><br><br><br><br><br><br>     <br><br><br><br><br>   <br><br><br><br><br><br><br>  <br><br><br><br><br><br><br>   <br><br><br><br><br><br><br>
      
 <!-- NÓS SOMOS A TRIBO ENERGY  -->
    <section class="about">
@@ -29,8 +26,6 @@ include "./menu/menu1.php";
     </div>
 
 
-<div></div>
-<br><br><br><br><br><br><br>   <br><br><br><br><br><br><br>  <br><br><br><br><br><br><br>   <br><br><br><br><br><br><br>  <br><br><br><br><br><br><br>   <br><br><br><br><br><br><br>
 <!-- regiao que o utilizador deseja -->
 <div class="cor_check">
       <br><br><br><br><br><br>
@@ -202,7 +197,7 @@ include "./menu/menu1.php";
   <img class="fotos" width="300px" src="./images/pingo-DOCE-removebg-preview.png" >
 
 
-  <img class="fotos" width="300px" src="./images/pingo-DOCE-removebg-preview.png" >
+  <img class="fotos" width="300px" src="./images/braga.png" >
 
   <img class="fotos"  width="300px" src="./images/slb.png" >
 

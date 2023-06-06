@@ -14,10 +14,15 @@ $(document).ready(function() {
             dataType: "json",
             success: function(resposta) {
                 if (resposta[0] == "false"){
-                    alert ("PASSWORD OU EMAIL ESTÃO INCORRETOS");
+                   toastr.warning('Existe campos por preencher!', 'Woops!!!');
                 }else{
-                    cookies(resposta);
+                    if (resposta[0] == "passworderrada"){
+                        toastr.warning('Password errada!', 'Woops!!!');
+                     }else{
+                         cookies(resposta);
+                     }
                 }
+
  
                 if (resposta["permissao"]== "admin") {
                    

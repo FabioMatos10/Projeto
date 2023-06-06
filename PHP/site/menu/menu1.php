@@ -16,7 +16,8 @@
 
 
     <div class="menu-bar">
-      <h1 class="logo"><a href="index.php" style="text-decoration: none;">GYM<span>ENERGY</span></h1>
+    <h1 class="logo"><a href="index.php" style="text-decoration: none;">GYM<span>ENERGY</span></h1>
+  
       <ul>
 
 
@@ -71,6 +72,6 @@
 
 
     </div>  
+      <div class="hero"></div>
 
-    <div class="hero">
     <script type="text/javascript" src="menu.js"></script>

@@ -48,6 +48,6 @@ function guardarcokies() {
 
   document.cookie = "nome= "+document.getElementById('alterar').value+';expires='+date.toUTCString()+"; secure=true"+';path=/';
   document.cookie = "password= "+document.getElementById('password').value+';expires='+date.toUTCString()+"; secure=true"+';path=/';
-
+z
 
 }

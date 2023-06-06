@@ -35,7 +35,7 @@
 
 .container .content h1{
    font-size: 50px;
-   color:yellowgreen;
+   color:#2ecc71;
 }
 
 .container .content h1 span{
@@ -52,7 +52,7 @@
    display: inline-block;
    padding:10px 30px;
    font-size: 20px;
-   background: yellowgreen;
+   background: #2ecc71;
    color:#fff;
    margin:0 5px;
    text-transform: capitalize;
@@ -77,7 +77,7 @@
    font-size: 30px;
    text-transform: uppercase;
    margin-bottom: 10px;
-   color:yellowgreen;
+   color:#2ecc71;
    text-align: center;
 }
 
@@ -96,7 +96,7 @@
 }
 
 .form-container form .form-btn{
-    background: yellowgreen;
+    background: #2ecc71;
     color: white;
     text-transform: capitalize;
     font-size: 20px;
@@ -104,24 +104,24 @@
 }
 
 .form-container form .form-btn:hover{
-   background: yellowgreen;
+   background: #2ecc71;
    color:#fff;
 }
 
 .form-container form p{
    margin-top: 10px;
    font-size: 20px;
-   color:yellowgreen;
+   color:#2ecc71;
 }
 
 .form-container form p a{
-   color:yellowgreen;
+   color:#2ecc71;
 }
 
 .form-container form .error-msg{
    margin:10px 0;
    display: block;
-   background: yellowgreen;
+   background: #2ecc71;
    color:#fff;
    border-radius: 5px;
    font-size: 20px;
@@ -135,7 +135,7 @@ table, th, td {
    table {
    border-collapse: collapse;
    margin: auto;
-   margin-top: 260px;
+
    
    }
    
@@ -152,5 +152,5 @@ table, th, td {
    
    
    tr:nth-child(even) {
-   background-color: #666;
+   background-color: #bdc3c7;
    }

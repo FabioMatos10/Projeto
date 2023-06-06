@@ -15,15 +15,15 @@ include "menu/menu.php"
   <section class="about">
         <div class="row">
             <div class="image">
-            <img src="./images/personal_trainer.jpg">
+            <img src="./images/david.jpg">
             </div>
             <div class="content">
                 <h1>TREINA COM PERSONAL TRAINER</h1>      
-                <P> <b> Queres atingir outro patamar?</b></P>
+                <P class="cor_p_letra"> <b> Queres atingir outro patamar?</b></P>
                 <h2> Perder peso, aumentar massa muscular ou recuperar de uma lesão? A nossa equipa de Personal Trainers é tudo o que estás a precisar. Garantimos motivação, superação e resultados!</h2>
-                <P> <b>O foco está nos teus objetivos!</b></P>
+                <P class="cor_p_letra"> <b>O foco está nos teus objetivos!</b></P>
                 <h2> Os nossos profissionais representam o Fitness UP, por isso, têm uma missão a cumprir. Os teus objetivos são a nossa prioridade e os teus resultados são as nossas vitórias.</h2>
-                <P> <b>Mais em menos tempo.</b></P>
+                <P class="cor_p_letra"> <b>Mais em menos tempo.</b></P>
                 <h2> Os resultados, esses, serão evidentes! Mais em menos tempo, treinos totalmente personalizados e em segurança.</h2>
             </div>
         </div>
@@ -33,7 +33,7 @@ include "menu/menu.php"
     <section class="about1">
         <div class="row1">
             <div class="image1">
-            <img src="./images/cris.jpg">
+            <img src="./images/ronnie.jpg">
             </div>
             <div class="content1">
                 <h1>VANTAGENS DE TREINAR COM UM PERSONAL TRAINER
